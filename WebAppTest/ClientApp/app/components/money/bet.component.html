@@ -1,0 +1,26 @@
+<div>
+    <!--<button (click)="mutateFirstProfessor()">Mutate First Professor</button>
+    <button (click)="updateFirstProfessor()">Immutably Update First Professor</button>-->
+    <table  *ngIf='players'>
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Total Bets</th>
+            <th>Total Bets Won</th>
+            <th>Total Bets Lost</th>
+            <th>Amount Won</th>
+            <th>Amount Lost</th>
+        </tr>
+  
+            <tr *ngFor="let player of players">
+                <td><a [routerLink]="['/player',player.id]">Create a bet</a></td>
+                <td>{{player.name}}</td>
+                <td>{{player.totalBets}}</td>
+                <td>{{player.totalBetsWon}}</td>
+                <td>{{player.totalBetsLost}}</td>
+                <td>{{player.amountWon}}</td>
+                <td>{{player.amountLost}}</td>
+            </tr>
+     
+    </table>
+</div>
